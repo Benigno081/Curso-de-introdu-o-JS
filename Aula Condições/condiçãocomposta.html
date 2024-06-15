@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEF</title>
+</head>
+<body>
+    <H1>Sistema de imigração</H1>
+    O seu país de origem é <input type="text" name="ps" id="ps">.
+    <input type="button" value="Verificar" onclick="vrf()">
+    <div id="res">Verifição:</div>
+<script>
+    function vrf(){
+        var país = window.document.getElementById('ps')
+        var res = window.document.getElementById('res')
+        var paísc = (país.value)
+        res.innerHTML = `<p>Seu país de origem é <strong>${paísc}</strong>.</p>`
+        if(paísc == 'Portugal'){
+            res.innerHTML += (`Você é Português, sejá bem vindo.`)
+        }else{
+            res.innerHTML += (`Você é estrangeiro, sejá bem vindo.`)
+        }
+        res.innerHTML += `<p>Entrada em território Português <strong>PERMITIDA</strong></p>`
+
+        
+
+    }
+    
+</script>
+</body>
+</html>
